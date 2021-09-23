@@ -37,3 +37,20 @@ for (i in seq(1:length(faculty))){
 table = data.frame(name, position, department, degree)  
 table = table[-c(1),]
 ```
+
+2.  Draw plot
+
+``` r
+# the number of faculty who is in the department of art
+a = sum(table$department == "Art") #52
+# the number of faculty who is in the department of Educational Psychology
+b = sum(table$department == "Educational Psychology") #35
+# the number of faculty who is in the department of Computer Science
+c = sum(table$department == "Computer Sciences") #65
+#vector = c(a,b,c)
+barplot(c(a,b,c),main = "Number of three departments", ylab = "total number", names.arg = c("Art","Educational Psychology","Computer Sciences"))
+```
+
+![](Stat-433-hw1_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
+github website: <https://github.com/xliao35/Homework1.git>
